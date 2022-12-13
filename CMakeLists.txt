@@ -33,6 +33,7 @@ include_directories(lib/aarch64)
 
 add_subdirectory(lib/NintendoSDK)
 target_link_libraries(odyssey PUBLIC NintendoSDK)
+target_compile_definitions(NintendoSDK PRIVATE NN_VER=351)
 
 add_subdirectory(lib/sead)
 target_link_libraries(odyssey PUBLIC sead)
